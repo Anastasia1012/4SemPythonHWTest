@@ -1,4 +1,7 @@
-﻿
+from random import randint
+import itertools
+import math
+from math import pi
 #1.Вычислить число c заданной точностью d
 
 #Пример:
@@ -9,8 +12,7 @@
 #Однако за какое именно число шагов будет достигнута приемлемая точность, заранее сказать трудно и желательно, 
 #чтобы программа сама определяла, когда следует остановиться.
 
-import math
-from math import pi
+
 
 n = pi
 print(n)
@@ -19,7 +21,7 @@ my_pi = sum(1/16**x*(4/(8*x + 1) - 2/(8*x + 4) - 1/(8*x + 5) - 1/(8*x + 6)) for 
 print(my_pi)
 
 #2. Задайте натуральное число N. Напишите программу, которая составит список простых множителей числа N.
-from array import array
+
 
 
 n = int(input())
@@ -43,8 +45,7 @@ print(f"Unique list of elements: {new_lst}")
 # (значения от 0 до 100) многочлена и записать в файл многочлен степени k.    
 #     *Пример: k=2 => 2*x² + 4*x + 5 = 0 или x² + 5 = 0 или 10*x²
 
-from random import randint
-import itertools
+
 
 k = randint(2, 7)
 
