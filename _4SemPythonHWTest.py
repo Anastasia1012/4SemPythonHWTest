@@ -46,19 +46,7 @@ print(f"Unique list of elements: {new_lst}")
 #     *Пример: k=2 => 2*x² + 4*x + 5 = 0 или x² + 5 = 0 или 10*x²
 
 
-
 k = randint(2, 7)
-
-# Второй многочлен для следующей задачи:
-
-k = randint(2, 5)
-
-ratios = get_ratios(k) 
-polynom2 = get_polynomial(k, ratios)
-print(polynom2)
-
-with open('33_Polynomial2.txt', 'w') as data:
-    data.write(polynom2)
 
 def get_ratios(k):
     ratios = [randint(0, 10) for i in range (k + 1)]
@@ -82,3 +70,15 @@ print(polynom1)
 
 with open('33_Polynomial.txt', 'w') as data:
     data.write(polynom1)
+
+
+# Второй многочлен для следующей задачи:
+
+k = randint(2, 5)
+
+ratios = get_ratios(k) 
+polynom2 = get_polynomial(k, ratios)
+print(polynom2)
+
+with open('33_Polynomial2.txt', 'w') as data:
+    data.write(polynom2)
