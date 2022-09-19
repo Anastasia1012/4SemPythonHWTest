@@ -9,29 +9,16 @@
 #Однако за какое именно число шагов будет достигнута приемлемая точность, заранее сказать трудно и желательно, 
 #чтобы программа сама определяла, когда следует остановиться.
 
-#s = 3
-#i = 1
-#sgn = 1
-#while str(s)[:12] != '3.1415926535' :
-#    s +=sgn/(i*(i+1)*(2*i+1))
-#    sgn *= -1
-#    i += 1
-#print(s)
-#print(i)
+import math
+from math import pi
+
+n = pi
+print(n)
+n = int(input("Введите число: "))
+my_pi = sum(1/16**x*(4/(8*x + 1) - 2/(8*x + 4) - 1/(8*x + 5) - 1/(8*x + 6)) for x in range(n))
+print(my_pi)
 
 #2. Задайте натуральное число N. Напишите программу, которая составит список простых множителей числа N.
-#def primfacs(n):
-#   i = 2
-#   primfac = []
-#   while i * i <= n:
-#       while n % i == 0:
-#           primfac.append(i)
-#           n = n / i
-#       i = i + 1
-#   if n > 1:
-#       primfac.append(n)
-#    return primfac
-
 from array import array
 
 
@@ -42,16 +29,17 @@ while n > 1:
         print(i, end=' ')
         n //= i
     i += 1
-    #Задайте последовательность чисел. 
-    #Напишите программу, которая выведет список неповторяющихся элементов исходной последовательности.
+    
+#3.Задайте последовательность чисел. 
+#Напишите программу, которая выведет список неповторяющихся элементов исходной последовательности.
 
-setarr = set(arr)
-if len(array) == len(setarr):
-    print('All elements are unique')
-else:
-    print('there are the same elements')
+lst = list(map(int, input("Input numbers with space:\n").split()))
+print(f"Original list: {lst}")
+new_lst = []
+[new_lst.append(i) for i in lst if i not in new_lst]
+print(f"Unique list of elements: {new_lst}")
 
-# 33. Задана натуральная степень k. Сформировать случайным образом список коэффициентов 
+# 4.Задана натуральная степень k. Сформировать случайным образом список коэффициентов 
 # (значения от 0 до 100) многочлена и записать в файл многочлен степени k.    
 #     *Пример: k=2 => 2*x² + 4*x + 5 = 0 или x² + 5 = 0 или 10*x²
 
